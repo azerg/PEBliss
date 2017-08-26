@@ -27,7 +27,7 @@ public:
 	template<typename T>
 	static void strip_nullbytes(std::basic_string<T>& str)
 	{
-		while(!*(str.end() - 1) && !str.empty())
+		while(!str.empty() && !*(str.end() - 1))
 			str.erase(str.length() - 1);
 	}
 
